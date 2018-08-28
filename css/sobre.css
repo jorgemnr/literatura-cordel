@@ -1,0 +1,135 @@
+/*=========== CONTEÚDO ===========*/
+
+#conteudo {
+    margin: 2%;
+}
+
+#conteudo header {
+    text-align: center;
+}
+
+.contFlex>img {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.contFlex>img:hover {
+    transform: scale(1.05);
+}
+
+#imagemGrande {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    min-width: 30%;
+}
+
+.contFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: khaki;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contFlex.Gradiente {
+    background: linear-gradient(45deg, rgb(138, 43, 226, 0.8), khaki, rgb(0, 0, 0, 0.6));
+    background-size: 1000% 100%;
+    animation: Gradiente 10s ease infinite;
+}
+
+@keyframes Gradiente {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.contFlexCol p {
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#nome {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.contFlexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.listaItens {
+    padding-left: 1.5rem;
+    line-height: 1.2rem;
+}
+
+.contato {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contato p {
+    margin-right: 1rem;
+}
+
+.contato a {
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.imgRedonda {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 0.5rem solid blueviolet;
+    object-fit: cover;
+    object-position: top;
+}
+
+.iconesSocias a {
+    display: inline-block;
+    padding: 1rem;
+    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: dimgray;
+}
+
+.iconesSocias img {
+    vertical-align: middle;
+}
+
+.iconesSocias a:hover {
+    background-color: blueviolet;
+}
+
+@media screen and (max-width: 640px) {
+    /*=========== SITE/GRID ===========*/
+    .contFlex {
+        flex-direction: column;
+    }
+    .contato {
+        justify-content: center;
+    }
+    .contFlexCol {
+        align-items: center;
+    }
+    .contFlexCol p {
+        text-align: center;
+    }
+}
